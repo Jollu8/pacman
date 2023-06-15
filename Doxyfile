@@ -1,0 +1,5 @@
+INPUT                  = . ./data/
+FILE_PATTERNS          = *.cpp *.h *.md *.txt
+RECURSIVE              = YES
+OUTPUT_LANGUAGE         = Russian
+EXCLUDE                = ./cmake-build-debug/
