@@ -1,0 +1,204 @@
+\doxysection{Класс SFOpen\+GLView}
+\hypertarget{interface_s_f_open_g_l_view}{}\label{interface_s_f_open_g_l_view}\index{SFOpenGLView@{SFOpenGLView}}
+
+
+Specialized NSOpen\+GLView.  
+
+
+
+
+{\ttfamily \#import $<$SFOpen\+GLView.\+h$>$}
+
+Граф наследования\+:SFOpen\+GLView\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{interface_s_f_open_g_l_view}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Методы экземпляра}
+\begin{DoxyCompactItemize}
+\item 
+(id) -\/ \mbox{\hyperlink{interface_s_f_open_g_l_view_aa5de0a15e4238494058794411d3764a9}{init\+With\+Frame\+:fullscreen\+:}}
+\begin{DoxyCompactList}\small\item\em Create the SFML Open\+GL view. \end{DoxyCompactList}\item 
+(void) -\/ \mbox{\hyperlink{interface_s_f_open_g_l_view_a384013e58f101224154e1c4a70a3d901}{finish\+Init}}
+\begin{DoxyCompactList}\small\item\em Finish the creation of the SFML Open\+GL view. \end{DoxyCompactList}\item 
+(void) -\/ \mbox{\hyperlink{interface_s_f_open_g_l_view_ae12b72607fcf8fae9cdfd9375ff2e15d}{set\+Requester\+To\+:}}
+\begin{DoxyCompactList}\small\item\em Apply the given requester to the view. \end{DoxyCompactList}\item 
+(NSPoint) -\/ \mbox{\hyperlink{interface_s_f_open_g_l_view_a1697a9924d01f595bbcbc7b4fdbb28cc}{compute\+Global\+Position\+Of\+Relative\+Point\+:}}
+\begin{DoxyCompactList}\small\item\em Compute the position in global coordinate. \end{DoxyCompactList}\item 
+(CGFloat) -\/ \mbox{\hyperlink{interface_s_f_open_g_l_view_a9b8bef934cb1acf3528ecb536c852e78}{display\+Scale\+Factor}}
+\begin{DoxyCompactList}\small\item\em Get the display scale factor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{interface_s_f_open_g_l_view_a868bdb28bc8ddcf109d60555c32b0127}{enable\+Key\+Repeat}}
+\begin{DoxyCompactList}\small\item\em Enable key repeat. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{interface_s_f_open_g_l_view_afcb1091205ca7f3512ff441ef47dcacf}{disable\+Key\+Repeat}}
+\begin{DoxyCompactList}\small\item\em Disable key repeat. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{interface_s_f_open_g_l_view_a4018935aa47081da7ab32dc1813cb50d}{convert\+NSKey\+Event\+To\+SFMLEvent\+:}}
+\begin{DoxyCompactList}\small\item\em Convert a key down/up NSEvent into an SFML key event. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{interface_s_f_open_g_l_view_ae25ec64b4e29620ec71645641fbf99e3}{is\+Valid\+Text\+Unicode\+:}}
+\begin{DoxyCompactList}\small\item\em Check if the event represent some Unicode text. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{interface_s_f_open_g_l_view_aee3e3f99be8164c1d0387aeae8440083}{set\+Cursor\+:}}
+\begin{DoxyCompactList}\small\item\em Set the system cursor for the window area. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{interface_s_f_open_g_l_view_ab15efa1225d6178c87534fc97215a7c5}{cursor\+Position\+From\+Event\+:}}
+\begin{DoxyCompactList}\small\item\em Compute the position of the cursor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{interface_s_f_open_g_l_view_abb974b0f1a7594b8fd5aebf40d3c9af6}{is\+Mouse\+Inside}}
+\begin{DoxyCompactList}\small\item\em Determine where the mouse is. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{interface_s_f_open_g_l_view_a0e271d19e0141f0ee80357ec8340c46d}{set\+Cursor\+Grabbed\+:}}
+\item 
+\mbox{\hyperlink{interface_s_f_open_g_l_view_aa688134386f9db196be65795aba1e231}{update\+Cursor\+Grabbed}}
+\item 
+\mbox{\hyperlink{interface_s_f_open_g_l_view_a093f34d8b8cb74ddac8b018f87909a07}{update\+Mouse\+State}}
+\begin{DoxyCompactList}\small\item\em Update the mouse state (in or out) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{interface_s_f_open_g_l_view_a2da5f65d8e191e59511e63f73f01adb5}{handle\+Mouse\+Down\+:}}
+\begin{DoxyCompactList}\small\item\em handle mouse down event \end{DoxyCompactList}\item 
+\mbox{\hyperlink{interface_s_f_open_g_l_view_a20c0618119c162b72abaec83adac4137}{handle\+Mouse\+Up\+:}}
+\begin{DoxyCompactList}\small\item\em handle mouse up event \end{DoxyCompactList}\item 
+\mbox{\hyperlink{interface_s_f_open_g_l_view_a54770d3642c7f85a45230d3d723d2f15}{handle\+Mouse\+Move\+:}}
+\begin{DoxyCompactList}\small\item\em handle mouse move event \end{DoxyCompactList}\item 
+\mbox{\hyperlink{interface_s_f_open_g_l_view_a76efa10c77506fa7630390e3e3dcc7a2}{is\+Cursor\+Currently\+Grabbed}}
+\begin{DoxyCompactList}\small\item\em Check whether the cursor is grabbed or not. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{interface_s_f_open_g_l_view_a7875f0b9bc3520521f200ac145106f6e}{move\+Cursor\+To\+:}}
+\begin{DoxyCompactList}\small\item\em Move the cursor to the given location. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{interface_s_f_open_g_l_view_a3172c032bf95b1404d41dbcca8afb7d0}{display\+Id}}
+\begin{DoxyCompactList}\small\item\em Get the display identifier on which the view is. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{interface_s_f_open_g_l_view_ad240cce0c06bd3bda7f2e29ee0d47a74}{mouse\+Button\+From\+Event\+:}}
+\begin{DoxyCompactList}\small\item\em Convert the NSEvent mouse button type to SFML type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Защищенные данные}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{interface_s_f_open_g_l_view_ab4cfba5f1c80b7aacb219bb8f6337e12}\label{interface_s_f_open_g_l_view_ab4cfba5f1c80b7aacb219bb8f6337e12} 
+sf\+::priv\+::\+Window\+Impl\+Cocoa \texorpdfstring{$\ast$}{*} {\bfseries m\+\_\+requester}
+\begin{DoxyCompactList}\small\item\em View\textquotesingle{}s requester. \end{DoxyCompactList}\item 
+\Hypertarget{interface_s_f_open_g_l_view_a746fd7510438905eafd65cbf1c8dc352}\label{interface_s_f_open_g_l_view_a746fd7510438905eafd65cbf1c8dc352} 
+BOOL {\bfseries m\+\_\+use\+Key\+Repeat}
+\begin{DoxyCompactList}\small\item\em Key repeat setting. \end{DoxyCompactList}\item 
+\Hypertarget{interface_s_f_open_g_l_view_ad321cd6bab9ea7502aded303b577998e}\label{interface_s_f_open_g_l_view_ad321cd6bab9ea7502aded303b577998e} 
+BOOL {\bfseries m\+\_\+mouse\+Is\+In}
+\begin{DoxyCompactList}\small\item\em Mouse positional state. \end{DoxyCompactList}\item 
+\Hypertarget{interface_s_f_open_g_l_view_a8508577f920b32bcc1716840587b5bf2}\label{interface_s_f_open_g_l_view_a8508577f920b32bcc1716840587b5bf2} 
+NSCursor \texorpdfstring{$\ast$}{*} {\bfseries m\+\_\+cursor}
+\begin{DoxyCompactList}\small\item\em Active cursor. \end{DoxyCompactList}\item 
+\Hypertarget{interface_s_f_open_g_l_view_a8b4c9487c935f6fdf67fa11fe82023dd}\label{interface_s_f_open_g_l_view_a8b4c9487c935f6fdf67fa11fe82023dd} 
+NSTracking\+Area \texorpdfstring{$\ast$}{*} {\bfseries m\+\_\+tracking\+Area}
+\begin{DoxyCompactList}\small\item\em Mouse tracking area. \end{DoxyCompactList}\item 
+\Hypertarget{interface_s_f_open_g_l_view_a5da6c2e3b4ed24745cd98faba116d83d}\label{interface_s_f_open_g_l_view_a5da6c2e3b4ed24745cd98faba116d83d} 
+BOOL {\bfseries m\+\_\+fullscreen}
+\begin{DoxyCompactList}\small\item\em Indicate whether the window is fullscreen or not. \end{DoxyCompactList}\item 
+\Hypertarget{interface_s_f_open_g_l_view_a3f0ec9155bfb92104b472d02adfaa8e8}\label{interface_s_f_open_g_l_view_a3f0ec9155bfb92104b472d02adfaa8e8} 
+CGFloat {\bfseries m\+\_\+scale\+Factor}
+\begin{DoxyCompactList}\small\item\em Display scale factor (e.\+g. 1x for classic display, 2x for retina) \end{DoxyCompactList}\item 
+\Hypertarget{interface_s_f_open_g_l_view_a34159db17cfcebd31fc158589ca43d56}\label{interface_s_f_open_g_l_view_a34159db17cfcebd31fc158589ca43d56} 
+BOOL {\bfseries m\+\_\+cursor\+Grabbed}
+\begin{DoxyCompactList}\small\item\em Is the mouse cursor trapped? \end{DoxyCompactList}\item 
+\Hypertarget{interface_s_f_open_g_l_view_a9fab9c89c46f6d46762c056512570c88}\label{interface_s_f_open_g_l_view_a9fab9c89c46f6d46762c056512570c88} 
+CGFloat {\bfseries m\+\_\+delta\+XBuffer}
+\begin{DoxyCompactList}\small\item\em See note about cursor grabbing above. \end{DoxyCompactList}\item 
+\Hypertarget{interface_s_f_open_g_l_view_a959c69f58ad62474571f08d07d4d0c08}\label{interface_s_f_open_g_l_view_a959c69f58ad62474571f08d07d4d0c08} 
+CGFloat {\bfseries m\+\_\+delta\+YBuffer}
+\begin{DoxyCompactList}\small\item\em See note about cursor grabbing above. \end{DoxyCompactList}\item 
+\Hypertarget{interface_s_f_open_g_l_view_a0a8df4ff4e13f3c4aa240da58d1a5c43}\label{interface_s_f_open_g_l_view_a0a8df4ff4e13f3c4aa240da58d1a5c43} 
+\mbox{\hyperlink{interface_s_f_silent_responder}{SFSilent\+Responder}} \texorpdfstring{$\ast$}{*} {\bfseries m\+\_\+silent\+Responder}
+\item 
+\Hypertarget{interface_s_f_open_g_l_view_ade5541077e7a3f443ba41516bdc12b2b}\label{interface_s_f_open_g_l_view_ade5541077e7a3f443ba41516bdc12b2b} 
+NSText\+View \texorpdfstring{$\ast$}{*} {\bfseries m\+\_\+hidden\+Text\+View}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Specialized NSOpen\+GLView. 
+
+Handle event and send them back to the requester.
+
+NSTracking\+Area is used to keep track of mouse events. We also need to be able to ignore mouse event when exiting fullscreen.
+
+Modifiers keys (cmd, ctrl, alt, shift) are handled by this class but the actual logic is done in SFKeyboard\+Modifiers\+Helper.(h\texorpdfstring{$\vert$}{|}mm).
+
+The interface is subdivided into several categories in order to have multiple implementation files to divide this monolithic implementation. However, all attributes are defined in the main interface declaration right below.
+
+Note about delta\+XBuffer and delta\+YBuffer\+: when grabbing the cursor for the first time, either by entering fullscreen or through set\+Cursor\+Grabbed\+:, the cursor might be projected into the view. Doing this will result in a big delta (relative movement) in the next move event (cursor\+Position\+From\+Event\+:), because no move event is generated, which in turn will give the impression that the user want to move the cursor by the same distance it was projected. To prevent the cursor to fly twice the distance we keep track of how much the cursor was projected in delta\+XBuffer and delta\+YBuffer. In cursor\+Position\+From\+Event\+: we can then reduce/augment those buffers to determine when a move event should result in an actual move of the cursor (that was disconnected from the system). 
+
+\doxysubsection{Документация метода}
+\Hypertarget{interface_s_f_open_g_l_view_a1697a9924d01f595bbcbc7b4fdbb28cc}\label{interface_s_f_open_g_l_view_a1697a9924d01f595bbcbc7b4fdbb28cc} 
+\index{SFOpenGLView@{SFOpenGLView}!computeGlobalPositionOfRelativePoint:@{computeGlobalPositionOfRelativePoint:}}
+\index{computeGlobalPositionOfRelativePoint:@{computeGlobalPositionOfRelativePoint:}!SFOpenGLView@{SFOpenGLView}}
+\doxysubsubsection{\texorpdfstring{computeGlobalPositionOfRelativePoint:}{computeGlobalPositionOfRelativePoint:}}
+{\footnotesize\ttfamily -\/ (NSPoint) compute\+Global\+Position\+Of\+Relative\+Point\+: \begin{DoxyParamCaption}\item[{(NSPoint)}]{point }\end{DoxyParamCaption}}
+
+
+
+Compute the position in global coordinate. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em point} & a point in SFML coordinate\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+the global coordinates of the point 
+\end{DoxyReturn}
+\Hypertarget{interface_s_f_open_g_l_view_a9b8bef934cb1acf3528ecb536c852e78}\label{interface_s_f_open_g_l_view_a9b8bef934cb1acf3528ecb536c852e78} 
+\index{SFOpenGLView@{SFOpenGLView}!displayScaleFactor@{displayScaleFactor}}
+\index{displayScaleFactor@{displayScaleFactor}!SFOpenGLView@{SFOpenGLView}}
+\doxysubsubsection{\texorpdfstring{displayScaleFactor}{displayScaleFactor}}
+{\footnotesize\ttfamily -\/ (CGFloat) display\+Scale\+Factor \begin{DoxyParamCaption}{ }\end{DoxyParamCaption}}
+
+
+
+Get the display scale factor. 
+
+\begin{DoxyReturn}{Возвращает}
+e.\+g. 1.\+0 for classic display, 2.\+0 for retina display 
+\end{DoxyReturn}
+\Hypertarget{interface_s_f_open_g_l_view_a384013e58f101224154e1c4a70a3d901}\label{interface_s_f_open_g_l_view_a384013e58f101224154e1c4a70a3d901} 
+\index{SFOpenGLView@{SFOpenGLView}!finishInit@{finishInit}}
+\index{finishInit@{finishInit}!SFOpenGLView@{SFOpenGLView}}
+\doxysubsubsection{\texorpdfstring{finishInit}{finishInit}}
+{\footnotesize\ttfamily -\/ (void) finish\+Init \begin{DoxyParamCaption}{ }\end{DoxyParamCaption}}
+
+
+
+Finish the creation of the SFML Open\+GL view. 
+
+This method should be called after the view was added to a window \Hypertarget{interface_s_f_open_g_l_view_aa5de0a15e4238494058794411d3764a9}\label{interface_s_f_open_g_l_view_aa5de0a15e4238494058794411d3764a9} 
+\index{SFOpenGLView@{SFOpenGLView}!initWithFrame:fullscreen:@{initWithFrame:fullscreen:}}
+\index{initWithFrame:fullscreen:@{initWithFrame:fullscreen:}!SFOpenGLView@{SFOpenGLView}}
+\doxysubsubsection{\texorpdfstring{initWithFrame:fullscreen:}{initWithFrame:fullscreen:}}
+{\footnotesize\ttfamily -\/ (id) init\+With\+Frame\+: \begin{DoxyParamCaption}\item[{(NSRect)}]{frame\+Rect }\item[{fullscreen\+:(BOOL)}]{is\+Fullscreen }\end{DoxyParamCaption}}
+
+
+
+Create the SFML Open\+GL view. 
+
+NB\+: -\/init\+With\+Frame\+: is also implemented to default is\+Fullscreen to NO in case \doxylink{interface_s_f_open_g_l_view}{SFOpen\+GLView} is created with the standard message.
+
+To finish the initialization -\/finish\+Init should be called too.
+
+
+\begin{DoxyParams}{Аргументы}
+{\em frame\+Rect} & dimension of the view \\
+\hline
+{\em is\+Fullscreen} & fullscreen flag\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+an initialized view 
+\end{DoxyReturn}
+\Hypertarget{interface_s_f_open_g_l_view_ae12b72607fcf8fae9cdfd9375ff2e15d}\label{interface_s_f_open_g_l_view_ae12b72607fcf8fae9cdfd9375ff2e15d} 
+\index{SFOpenGLView@{SFOpenGLView}!setRequesterTo:@{setRequesterTo:}}
+\index{setRequesterTo:@{setRequesterTo:}!SFOpenGLView@{SFOpenGLView}}
+\doxysubsubsection{\texorpdfstring{setRequesterTo:}{setRequesterTo:}}
+{\footnotesize\ttfamily -\/ (void) set\+Requester\+To\+: \begin{DoxyParamCaption}\item[{(sf\+::priv\+::\+Window\+Impl\+Cocoa \texorpdfstring{$\ast$}{*})}]{requester }\end{DoxyParamCaption}}
+
+
+
+Apply the given requester to the view. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em requester} & new \textquotesingle{}requester\textquotesingle{} of the view \\
+\hline
+\end{DoxyParams}
+
+
+Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+cmake-\/build-\/debug/\+\_\+deps/sfml-\/src/src/\+SFML/\+Window/\+OSX/SFOpen\+GLView.\+h\end{DoxyCompactItemize}

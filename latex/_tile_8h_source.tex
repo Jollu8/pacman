@@ -1,0 +1,43 @@
+\doxysection{Tile.\+h}
+\hypertarget{_tile_8h_source}{}\label{_tile_8h_source}\mbox{\hyperlink{_tile_8h}{См. документацию.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <cfloat>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <SFML/System/Vector2.hpp>}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}np.h"{}}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{enum\ class}\ \mbox{\hyperlink{_tile_8h_a271bc07be325bca511bcb747e0ff2fda}{eTileType}}\ \{}
+\DoxyCodeLine{00020\ \ \ \ \ \mbox{\hyperlink{_tile_8h_a271bc07be325bca511bcb747e0ff2fdaa558dc4e29655337a3994251549d0dc5d}{e\_Path}}\ =\ -\/1,\ }
+\DoxyCodeLine{00021\ \ \ \ \ \mbox{\hyperlink{_tile_8h_a271bc07be325bca511bcb747e0ff2fdaa85e8d42f3c0ebedf4286bb323168f1f9}{e\_Wall}}\ =\ 0,\ }
+\DoxyCodeLine{00022\ \ \ \ \ \mbox{\hyperlink{_tile_8h_a271bc07be325bca511bcb747e0ff2fdaac91ee991934e5b21d21ff0d62490a7c4}{e\_Coin}}\ =\ 1,\ }
+\DoxyCodeLine{00023\ \ \ \ \ \mbox{\hyperlink{_tile_8h_a271bc07be325bca511bcb747e0ff2fdaa73e0433ad21b32161a6d783cedaf4d41}{e\_PowerUp}}\ =\ 2,\ }
+\DoxyCodeLine{00024\ \ \ \ \ \mbox{\hyperlink{_tile_8h_a271bc07be325bca511bcb747e0ff2fdaafdd9ca6f48a11f8d902891c939e71326}{e\_WrapAroundPath}}\ =\ 3\ }
+\DoxyCodeLine{00025\ \};}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00033\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_tile}{Tile}}\ \{}
+\DoxyCodeLine{00043\ \ \ \ \ \mbox{\hyperlink{struct_tile_a2d2e73b37524e9e54049eed3c9debc8a}{Tile}}(\mbox{\hyperlink{_tile_8h_a271bc07be325bca511bcb747e0ff2fda}{eTileType}}\ type,\ sf::Vector2i\ position,\ \textcolor{keywordtype}{bool}\ canCollide)}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{struct_tile_adf65d98dc087bbb56bc7e98d16d562f3}{m\_type}}(type),\ \mbox{\hyperlink{struct_tile_afd7bd5bc9a5fa6e4f7e3056f5571fc68}{m\_position}}(position),\ \mbox{\hyperlink{struct_tile_afb491fc45c73584446539fab187ca1e9}{m\_canCollide}}(canCollide),}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_tile_a8bc3dd3f6846bd57dd515f24e3531afc}{m\_cameFromNode}}(nullptr),\ \mbox{\hyperlink{struct_tile_a1a2526801c46e7432523b09b038fc137}{m\_fCost}}(0),\ \mbox{\hyperlink{struct_tile_a572c8706568e37b0e12515e4105a6fa5}{m\_gCost}}(0),\ \mbox{\hyperlink{struct_tile_a058410ac3e8f1bdf457120b4958fcd4b}{m\_hCost}}(0)\ \{}
+\DoxyCodeLine{00046\ \ \ \ \ \}}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{struct_tile_a2d4e00e6f685950bdca82d10a6badbe3}{operator==}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_tile}{Tile}}\ \&tile)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{struct_tile_adf65d98dc087bbb56bc7e98d16d562f3}{m\_type}}\ ==\ tile.\mbox{\hyperlink{struct_tile_adf65d98dc087bbb56bc7e98d16d562f3}{m\_type}}\ \&\&\ \mbox{\hyperlink{struct_tile_afd7bd5bc9a5fa6e4f7e3056f5571fc68}{m\_position}}\ ==\ tile.\mbox{\hyperlink{struct_tile_afd7bd5bc9a5fa6e4f7e3056f5571fc68}{m\_position}};}
+\DoxyCodeLine{00058\ \ \ \ \ \}}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{struct_tile_a393831c0e1f7441890815b522dde87bb}{CalculateFCost}}()\ \{}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_tile_a1a2526801c46e7432523b09b038fc137}{m\_fCost}}\ =\ \mbox{\hyperlink{struct_tile_a572c8706568e37b0e12515e4105a6fa5}{m\_gCost}}\ +\ \mbox{\hyperlink{struct_tile_a058410ac3e8f1bdf457120b4958fcd4b}{m\_hCost}};}
+\DoxyCodeLine{00067\ \ \ \ \ \}}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \ \ \ \ \mbox{\hyperlink{_tile_8h_a271bc07be325bca511bcb747e0ff2fda}{eTileType}}\ \mbox{\hyperlink{struct_tile_adf65d98dc087bbb56bc7e98d16d562f3}{m\_type}};\ }
+\DoxyCodeLine{00070\ \ \ \ \ sf::Vector2i\ \mbox{\hyperlink{struct_tile_afd7bd5bc9a5fa6e4f7e3056f5571fc68}{m\_position}};\ }
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{struct_tile_afb491fc45c73584446539fab187ca1e9}{m\_canCollide}};\ }
+\DoxyCodeLine{00073\ \ \ \ \ \mbox{\hyperlink{struct_tile}{Tile}}\ *\mbox{\hyperlink{struct_tile_a8bc3dd3f6846bd57dd515f24e3531afc}{m\_cameFromNode}};\ }
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_tile_a1a2526801c46e7432523b09b038fc137}{m\_fCost}};\ }
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_tile_a572c8706568e37b0e12515e4105a6fa5}{m\_gCost}};\ }
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_tile_a058410ac3e8f1bdf457120b4958fcd4b}{m\_hCost}};\ }
+\DoxyCodeLine{00077\ \};}
+
+\end{DoxyCode}

@@ -1,0 +1,168 @@
+\doxysection{Класс Entity}
+\hypertarget{class_entity}{}\label{class_entity}\index{Entity@{Entity}}
+
+
+Класс \doxylink{class_entity}{Entity} представляет собой сущность в игре.  
+
+
+
+
+{\ttfamily \#include $<$Entity.\+h$>$}
+
+Граф наследования\+:Entity\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_entity}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_entity_ab7eb106fa5ab84ba79d40488cd0a3779}{Set\+Direction}} (const e\+Direction direction)
+\begin{DoxyCompactList}\small\item\em Устанавливает направление движения сущности. \end{DoxyCompactList}\item 
+e\+Direction \mbox{\hyperlink{class_entity_adb5b08aaa372e3a1f7aad93731cfc2af}{Get\+Direction}} () const
+\begin{DoxyCompactList}\small\item\em Возвращает текущее направление движения сущности. \end{DoxyCompactList}\item 
+sf\+::\+Vector2i \mbox{\hyperlink{class_entity_a29a89bbdae131a7c73e5d8e53b3a3889}{Get\+Position}} () const
+\begin{DoxyCompactList}\small\item\em Возвращает текущую позицию сущности. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_entity_a65fab80b9b3308ca83dda032ce6566c7}{Set\+Position}} (const sf\+::\+Vector2i position)
+\begin{DoxyCompactList}\small\item\em Устанавливает позицию сущности. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Защищенные члены}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_entity_a02097b55d7dcc8a0c323ce89fda0a5d3}{Entity}} (const sf\+::\+Vector2i position, const int speed, const e\+Direction starting\+Direction, sf\+::\+Color colour)
+\begin{DoxyCompactList}\small\item\em Конструктор класса \doxylink{class_entity}{Entity}. \end{DoxyCompactList}\item 
+\Hypertarget{class_entity_a4d06551559f03e70a86c1f94677881e4}\label{class_entity_a4d06551559f03e70a86c1f94677881e4} 
+void {\bfseries Wrap\+Around} ()
+\begin{DoxyCompactList}\small\item\em Обрабатывает перемещение сущности за границы игрового поля. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_entity_abac0cb66c435ab4e74cd5b1f785ba087}{Check\+For\+Blockades}} (const std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{struct_tile}{Tile}} $>$ $>$ \&tiles)
+\begin{DoxyCompactList}\small\item\em Проверяет наличие препятствий на пути движения сущности. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Защищенные данные}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_entity_aed236e87a555c9db770fb1cbd1dc776a}\label{class_entity_aed236e87a555c9db770fb1cbd1dc776a} 
+sf\+::\+Vector2i {\bfseries m\+\_\+position}
+\begin{DoxyCompactList}\small\item\em Позиция сущности. \end{DoxyCompactList}\item 
+\Hypertarget{class_entity_aa47e538a2d1ba097823c87cc12b29c19}\label{class_entity_aa47e538a2d1ba097823c87cc12b29c19} 
+int {\bfseries m\+\_\+speed}
+\begin{DoxyCompactList}\small\item\em Скорость движения сущности. \end{DoxyCompactList}\item 
+\Hypertarget{class_entity_acf368d3ad85d1cec2fc6d139207c23cd}\label{class_entity_acf368d3ad85d1cec2fc6d139207c23cd} 
+e\+Direction {\bfseries m\+\_\+current\+Direction}
+\begin{DoxyCompactList}\small\item\em Текущее направление движения сущности. \end{DoxyCompactList}\item 
+\Hypertarget{class_entity_a3a3241d5db2b0db20c7dc31cc667e877}\label{class_entity_a3a3241d5db2b0db20c7dc31cc667e877} 
+std\+::vector$<$ e\+Direction $>$ {\bfseries m\+\_\+limited\+Directions}
+\begin{DoxyCompactList}\small\item\em Ограниченные направления движения сущности. \end{DoxyCompactList}\item 
+\Hypertarget{class_entity_aad5beade91ce317b17b6d3d7f9f5b355}\label{class_entity_aad5beade91ce317b17b6d3d7f9f5b355} 
+sf\+::\+Rectangle\+Shape {\bfseries m\+\_\+shape}
+\begin{DoxyCompactList}\small\item\em Форма сущности. \end{DoxyCompactList}\item 
+\Hypertarget{class_entity_a66441c89aba33ce80c20b8a0485666a8}\label{class_entity_a66441c89aba33ce80c20b8a0485666a8} 
+sf\+::\+Color {\bfseries m\+\_\+colour}
+\begin{DoxyCompactList}\small\item\em Цвет сущности. \end{DoxyCompactList}\item 
+\Hypertarget{class_entity_ad17924290a1cec32e14959a8e423acc2}\label{class_entity_ad17924290a1cec32e14959a8e423acc2} 
+sf\+::\+Clock {\bfseries m\+\_\+clock}
+\begin{DoxyCompactList}\small\item\em Таймер для обновления состояния сущности. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Класс \doxylink{class_entity}{Entity} представляет собой сущность в игре. 
+
+\doxysubsection{Конструктор(ы)}
+\Hypertarget{class_entity_a02097b55d7dcc8a0c323ce89fda0a5d3}\label{class_entity_a02097b55d7dcc8a0c323ce89fda0a5d3} 
+\index{Entity@{Entity}!Entity@{Entity}}
+\index{Entity@{Entity}!Entity@{Entity}}
+\doxysubsubsection{\texorpdfstring{Entity()}{Entity()}}
+{\footnotesize\ttfamily Entity\+::\+Entity (\begin{DoxyParamCaption}\item[{const sf\+::\+Vector2i}]{position,  }\item[{const int}]{speed,  }\item[{const e\+Direction}]{starting\+Direction,  }\item[{sf\+::\+Color}]{colour }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Конструктор класса \doxylink{class_entity}{Entity}. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em position} & Начальная позиция сущности. \\
+\hline
+{\em speed} & Скорость движения сущности. \\
+\hline
+{\em starting\+Direction} & Начальное направление движения сущности. \\
+\hline
+{\em colour} & Цвет сущности. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Методы}
+\Hypertarget{class_entity_abac0cb66c435ab4e74cd5b1f785ba087}\label{class_entity_abac0cb66c435ab4e74cd5b1f785ba087} 
+\index{Entity@{Entity}!CheckForBlockades@{CheckForBlockades}}
+\index{CheckForBlockades@{CheckForBlockades}!Entity@{Entity}}
+\doxysubsubsection{\texorpdfstring{CheckForBlockades()}{CheckForBlockades()}}
+{\footnotesize\ttfamily void Entity\+::\+Check\+For\+Blockades (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{struct_tile}{Tile}} $>$ $>$ \&}]{tiles }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Проверяет наличие препятствий на пути движения сущности. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em tiles} & Двумерный массив тайлов игрового поля. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_entity_adb5b08aaa372e3a1f7aad93731cfc2af}\label{class_entity_adb5b08aaa372e3a1f7aad93731cfc2af} 
+\index{Entity@{Entity}!GetDirection@{GetDirection}}
+\index{GetDirection@{GetDirection}!Entity@{Entity}}
+\doxysubsubsection{\texorpdfstring{GetDirection()}{GetDirection()}}
+{\footnotesize\ttfamily e\+Direction Entity\+::\+Get\+Direction (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Возвращает текущее направление движения сущности. 
+
+\begin{DoxyReturn}{Возвращает}
+Текущее направление движения. 
+\end{DoxyReturn}
+\Hypertarget{class_entity_a29a89bbdae131a7c73e5d8e53b3a3889}\label{class_entity_a29a89bbdae131a7c73e5d8e53b3a3889} 
+\index{Entity@{Entity}!GetPosition@{GetPosition}}
+\index{GetPosition@{GetPosition}!Entity@{Entity}}
+\doxysubsubsection{\texorpdfstring{GetPosition()}{GetPosition()}}
+{\footnotesize\ttfamily sf\+::\+Vector2i Entity\+::\+Get\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Возвращает текущую позицию сущности. 
+
+\begin{DoxyReturn}{Возвращает}
+Текущая позиция сущности. 
+\end{DoxyReturn}
+\Hypertarget{class_entity_ab7eb106fa5ab84ba79d40488cd0a3779}\label{class_entity_ab7eb106fa5ab84ba79d40488cd0a3779} 
+\index{Entity@{Entity}!SetDirection@{SetDirection}}
+\index{SetDirection@{SetDirection}!Entity@{Entity}}
+\doxysubsubsection{\texorpdfstring{SetDirection()}{SetDirection()}}
+{\footnotesize\ttfamily void Entity\+::\+Set\+Direction (\begin{DoxyParamCaption}\item[{const e\+Direction}]{direction }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Устанавливает направление движения сущности. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em direction} & Направление движения. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_entity_a65fab80b9b3308ca83dda032ce6566c7}\label{class_entity_a65fab80b9b3308ca83dda032ce6566c7} 
+\index{Entity@{Entity}!SetPosition@{SetPosition}}
+\index{SetPosition@{SetPosition}!Entity@{Entity}}
+\doxysubsubsection{\texorpdfstring{SetPosition()}{SetPosition()}}
+{\footnotesize\ttfamily void Entity\+::\+Set\+Position (\begin{DoxyParamCaption}\item[{const sf\+::\+Vector2i}]{position }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Устанавливает позицию сущности. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em position} & Новая позиция сущности. \\
+\hline
+\end{DoxyParams}
+
+
+Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+Entity.\+h\end{DoxyCompactItemize}

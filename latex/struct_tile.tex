@@ -1,0 +1,149 @@
+\doxysection{Структура Tile}
+\hypertarget{struct_tile}{}\label{struct_tile}\index{Tile@{Tile}}
+
+
+Структура плитки.  
+
+
+
+
+{\ttfamily \#include $<$Tile.\+h$>$}
+
+\doxysubsubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_tile_a2d2e73b37524e9e54049eed3c9debc8a}{Tile}} (\mbox{\hyperlink{_tile_8h_a271bc07be325bca511bcb747e0ff2fda}{e\+Tile\+Type}} type, sf\+::\+Vector2i position, bool can\+Collide)
+\begin{DoxyCompactList}\small\item\em Конструктор с параметрами. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{struct_tile_a2d4e00e6f685950bdca82d10a6badbe3}{operator==}} (const \mbox{\hyperlink{struct_tile}{Tile}} \&tile) const
+\begin{DoxyCompactList}\small\item\em Оператор равенства. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{struct_tile_a393831c0e1f7441890815b522dde87bb}{Calculate\+FCost}} ()
+\begin{DoxyCompactList}\small\item\em Вычисление значения F-\/стоимости. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Открытые атрибуты}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_tile_8h_a271bc07be325bca511bcb747e0ff2fda}{e\+Tile\+Type}} \mbox{\hyperlink{struct_tile_adf65d98dc087bbb56bc7e98d16d562f3}{m\+\_\+type}}
+\item 
+sf\+::\+Vector2i \mbox{\hyperlink{struct_tile_afd7bd5bc9a5fa6e4f7e3056f5571fc68}{m\+\_\+position}}
+\item 
+bool \mbox{\hyperlink{struct_tile_afb491fc45c73584446539fab187ca1e9}{m\+\_\+can\+Collide}}
+\item 
+\mbox{\hyperlink{struct_tile}{Tile}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{struct_tile_a8bc3dd3f6846bd57dd515f24e3531afc}{m\+\_\+came\+From\+Node}}
+\item 
+int \mbox{\hyperlink{struct_tile_a1a2526801c46e7432523b09b038fc137}{m\+\_\+f\+Cost}}
+\item 
+int \mbox{\hyperlink{struct_tile_a572c8706568e37b0e12515e4105a6fa5}{m\+\_\+g\+Cost}}
+\item 
+int \mbox{\hyperlink{struct_tile_a058410ac3e8f1bdf457120b4958fcd4b}{m\+\_\+h\+Cost}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Структура плитки. 
+
+Структура \doxylink{struct_tile}{Tile} представляет собой игровой объект \"{}плитка\"{}. 
+
+\doxysubsection{Конструктор(ы)}
+\Hypertarget{struct_tile_a2d2e73b37524e9e54049eed3c9debc8a}\label{struct_tile_a2d2e73b37524e9e54049eed3c9debc8a} 
+\index{Tile@{Tile}!Tile@{Tile}}
+\index{Tile@{Tile}!Tile@{Tile}}
+\doxysubsubsection{\texorpdfstring{Tile()}{Tile()}}
+{\footnotesize\ttfamily Tile\+::\+Tile (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_tile_8h_a271bc07be325bca511bcb747e0ff2fda}{e\+Tile\+Type}}}]{type,  }\item[{sf\+::\+Vector2i}]{position,  }\item[{bool}]{can\+Collide }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Конструктор с параметрами. 
+
+Инициализирует объект структуры \doxylink{struct_tile}{Tile} с указанными значениями типа, позиции и возможности столкновения.
+
+
+\begin{DoxyParams}{Аргументы}
+{\em type} & Тип плитки (e\+Tile\+Type). \\
+\hline
+{\em position} & Позиция плитки (sf\+::\+Vector2i). \\
+\hline
+{\em can\+Collide} & Возможность столкновения с плиткой (bool). \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Методы}
+\Hypertarget{struct_tile_a393831c0e1f7441890815b522dde87bb}\label{struct_tile_a393831c0e1f7441890815b522dde87bb} 
+\index{Tile@{Tile}!CalculateFCost@{CalculateFCost}}
+\index{CalculateFCost@{CalculateFCost}!Tile@{Tile}}
+\doxysubsubsection{\texorpdfstring{CalculateFCost()}{CalculateFCost()}}
+{\footnotesize\ttfamily void Tile\+::\+Calculate\+FCost (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Вычисление значения F-\/стоимости. 
+
+Вычисляет значение F-\/стоимости как сумму значений G-\/стоимости и H-\/стоимости. \Hypertarget{struct_tile_a2d4e00e6f685950bdca82d10a6badbe3}\label{struct_tile_a2d4e00e6f685950bdca82d10a6badbe3} 
+\index{Tile@{Tile}!operator==@{operator==}}
+\index{operator==@{operator==}!Tile@{Tile}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool Tile\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_tile}{Tile}} \&}]{tile }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Оператор равенства. 
+
+Сравнивает два объекта структуры \doxylink{struct_tile}{Tile} на равенство.
+
+
+\begin{DoxyParams}{Аргументы}
+{\em tile} & Объект структуры \doxylink{struct_tile}{Tile} для сравнения. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Результат сравнения (bool). 
+\end{DoxyReturn}
+
+
+\doxysubsection{Данные класса}
+\Hypertarget{struct_tile_a8bc3dd3f6846bd57dd515f24e3531afc}\label{struct_tile_a8bc3dd3f6846bd57dd515f24e3531afc} 
+\index{Tile@{Tile}!m\_cameFromNode@{m\_cameFromNode}}
+\index{m\_cameFromNode@{m\_cameFromNode}!Tile@{Tile}}
+\doxysubsubsection{\texorpdfstring{m\_cameFromNode}{m\_cameFromNode}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_tile}{Tile}}\texorpdfstring{$\ast$}{*} Tile\+::m\+\_\+came\+From\+Node}
+
+Указатель на предыдущую плитку в пути. \Hypertarget{struct_tile_afb491fc45c73584446539fab187ca1e9}\label{struct_tile_afb491fc45c73584446539fab187ca1e9} 
+\index{Tile@{Tile}!m\_canCollide@{m\_canCollide}}
+\index{m\_canCollide@{m\_canCollide}!Tile@{Tile}}
+\doxysubsubsection{\texorpdfstring{m\_canCollide}{m\_canCollide}}
+{\footnotesize\ttfamily bool Tile\+::m\+\_\+can\+Collide}
+
+Возможность столкновения с плиткой. \Hypertarget{struct_tile_a1a2526801c46e7432523b09b038fc137}\label{struct_tile_a1a2526801c46e7432523b09b038fc137} 
+\index{Tile@{Tile}!m\_fCost@{m\_fCost}}
+\index{m\_fCost@{m\_fCost}!Tile@{Tile}}
+\doxysubsubsection{\texorpdfstring{m\_fCost}{m\_fCost}}
+{\footnotesize\ttfamily int Tile\+::m\+\_\+f\+Cost}
+
+Значение F-\/стоимости. \Hypertarget{struct_tile_a572c8706568e37b0e12515e4105a6fa5}\label{struct_tile_a572c8706568e37b0e12515e4105a6fa5} 
+\index{Tile@{Tile}!m\_gCost@{m\_gCost}}
+\index{m\_gCost@{m\_gCost}!Tile@{Tile}}
+\doxysubsubsection{\texorpdfstring{m\_gCost}{m\_gCost}}
+{\footnotesize\ttfamily int Tile\+::m\+\_\+g\+Cost}
+
+Значение G-\/стоимости. \Hypertarget{struct_tile_a058410ac3e8f1bdf457120b4958fcd4b}\label{struct_tile_a058410ac3e8f1bdf457120b4958fcd4b} 
+\index{Tile@{Tile}!m\_hCost@{m\_hCost}}
+\index{m\_hCost@{m\_hCost}!Tile@{Tile}}
+\doxysubsubsection{\texorpdfstring{m\_hCost}{m\_hCost}}
+{\footnotesize\ttfamily int Tile\+::m\+\_\+h\+Cost}
+
+Значение H-\/стоимости. \Hypertarget{struct_tile_afd7bd5bc9a5fa6e4f7e3056f5571fc68}\label{struct_tile_afd7bd5bc9a5fa6e4f7e3056f5571fc68} 
+\index{Tile@{Tile}!m\_position@{m\_position}}
+\index{m\_position@{m\_position}!Tile@{Tile}}
+\doxysubsubsection{\texorpdfstring{m\_position}{m\_position}}
+{\footnotesize\ttfamily sf\+::\+Vector2i Tile\+::m\+\_\+position}
+
+Позиция плитки. \Hypertarget{struct_tile_adf65d98dc087bbb56bc7e98d16d562f3}\label{struct_tile_adf65d98dc087bbb56bc7e98d16d562f3} 
+\index{Tile@{Tile}!m\_type@{m\_type}}
+\index{m\_type@{m\_type}!Tile@{Tile}}
+\doxysubsubsection{\texorpdfstring{m\_type}{m\_type}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_tile_8h_a271bc07be325bca511bcb747e0ff2fda}{e\+Tile\+Type}} Tile\+::m\+\_\+type}
+
+Тип плитки. 
+
+Объявления и описания членов структуры находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_tile_8h}{Tile.\+h}}\end{DoxyCompactItemize}

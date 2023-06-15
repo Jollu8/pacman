@@ -1,0 +1,136 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.7"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project: Исходный файл Tile.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.7 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Tile.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_tile_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;cfloat&gt;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;SFML/System/Vector2.hpp&gt;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;np.h&quot;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="_tile_8h.html#a271bc07be325bca511bcb747e0ff2fda">   19</a></span><span class="keyword">enum class</span> <a class="code hl_enumeration" href="_tile_8h.html#a271bc07be325bca511bcb747e0ff2fda">eTileType</a> {</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <a class="code hl_enumvalue" href="_tile_8h.html#a271bc07be325bca511bcb747e0ff2fdaa558dc4e29655337a3994251549d0dc5d">e_Path</a> = -1, </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <a class="code hl_enumvalue" href="_tile_8h.html#a271bc07be325bca511bcb747e0ff2fdaa85e8d42f3c0ebedf4286bb323168f1f9">e_Wall</a> = 0, </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <a class="code hl_enumvalue" href="_tile_8h.html#a271bc07be325bca511bcb747e0ff2fdaac91ee991934e5b21d21ff0d62490a7c4">e_Coin</a> = 1, </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <a class="code hl_enumvalue" href="_tile_8h.html#a271bc07be325bca511bcb747e0ff2fdaa73e0433ad21b32161a6d783cedaf4d41">e_PowerUp</a> = 2, </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <a class="code hl_enumvalue" href="_tile_8h.html#a271bc07be325bca511bcb747e0ff2fdaafdd9ca6f48a11f8d902891c939e71326">e_WrapAroundPath</a> = 3 </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>};</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="struct_tile.html">   33</a></span><span class="keyword">struct </span><a class="code hl_struct" href="struct_tile.html">Tile</a> {</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="struct_tile.html#a2d2e73b37524e9e54049eed3c9debc8a">   43</a></span>    <a class="code hl_function" href="struct_tile.html#a2d2e73b37524e9e54049eed3c9debc8a">Tile</a>(<a class="code hl_enumeration" href="_tile_8h.html#a271bc07be325bca511bcb747e0ff2fda">eTileType</a> type, sf::Vector2i position, <span class="keywordtype">bool</span> canCollide)</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>            : <a class="code hl_variable" href="struct_tile.html#adf65d98dc087bbb56bc7e98d16d562f3">m_type</a>(type), <a class="code hl_variable" href="struct_tile.html#afd7bd5bc9a5fa6e4f7e3056f5571fc68">m_position</a>(position), <a class="code hl_variable" href="struct_tile.html#afb491fc45c73584446539fab187ca1e9">m_canCollide</a>(canCollide),</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>              <a class="code hl_variable" href="struct_tile.html#a8bc3dd3f6846bd57dd515f24e3531afc">m_cameFromNode</a>(nullptr), <a class="code hl_variable" href="struct_tile.html#a1a2526801c46e7432523b09b038fc137">m_fCost</a>(0), <a class="code hl_variable" href="struct_tile.html#a572c8706568e37b0e12515e4105a6fa5">m_gCost</a>(0), <a class="code hl_variable" href="struct_tile.html#a058410ac3e8f1bdf457120b4958fcd4b">m_hCost</a>(0) {</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    }</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="struct_tile.html#a2d4e00e6f685950bdca82d10a6badbe3">   56</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="struct_tile.html#a2d4e00e6f685950bdca82d10a6badbe3">operator==</a>(<span class="keyword">const</span> <a class="code hl_struct" href="struct_tile.html">Tile</a> &amp;tile)<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="struct_tile.html#adf65d98dc087bbb56bc7e98d16d562f3">m_type</a> == tile.<a class="code hl_variable" href="struct_tile.html#adf65d98dc087bbb56bc7e98d16d562f3">m_type</a> &amp;&amp; <a class="code hl_variable" href="struct_tile.html#afd7bd5bc9a5fa6e4f7e3056f5571fc68">m_position</a> == tile.<a class="code hl_variable" href="struct_tile.html#afd7bd5bc9a5fa6e4f7e3056f5571fc68">m_position</a>;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    }</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="struct_tile.html#a393831c0e1f7441890815b522dde87bb">   65</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="struct_tile.html#a393831c0e1f7441890815b522dde87bb">CalculateFCost</a>() {</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        <a class="code hl_variable" href="struct_tile.html#a1a2526801c46e7432523b09b038fc137">m_fCost</a> = <a class="code hl_variable" href="struct_tile.html#a572c8706568e37b0e12515e4105a6fa5">m_gCost</a> + <a class="code hl_variable" href="struct_tile.html#a058410ac3e8f1bdf457120b4958fcd4b">m_hCost</a>;</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    }</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="struct_tile.html#adf65d98dc087bbb56bc7e98d16d562f3">   69</a></span>    <a class="code hl_enumeration" href="_tile_8h.html#a271bc07be325bca511bcb747e0ff2fda">eTileType</a> <a class="code hl_variable" href="struct_tile.html#adf65d98dc087bbb56bc7e98d16d562f3">m_type</a>; </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="struct_tile.html#afd7bd5bc9a5fa6e4f7e3056f5571fc68">   70</a></span>    sf::Vector2i <a class="code hl_variable" href="struct_tile.html#afd7bd5bc9a5fa6e4f7e3056f5571fc68">m_position</a>; </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="struct_tile.html#afb491fc45c73584446539fab187ca1e9">   71</a></span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="struct_tile.html#afb491fc45c73584446539fab187ca1e9">m_canCollide</a>; </div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="struct_tile.html#a8bc3dd3f6846bd57dd515f24e3531afc">   73</a></span>    <a class="code hl_struct" href="struct_tile.html">Tile</a> *<a class="code hl_variable" href="struct_tile.html#a8bc3dd3f6846bd57dd515f24e3531afc">m_cameFromNode</a>; </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno"><a class="line" href="struct_tile.html#a1a2526801c46e7432523b09b038fc137">   74</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="struct_tile.html#a1a2526801c46e7432523b09b038fc137">m_fCost</a>; </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="struct_tile.html#a572c8706568e37b0e12515e4105a6fa5">   75</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="struct_tile.html#a572c8706568e37b0e12515e4105a6fa5">m_gCost</a>; </div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="struct_tile.html#a058410ac3e8f1bdf457120b4958fcd4b">   76</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="struct_tile.html#a058410ac3e8f1bdf457120b4958fcd4b">m_hCost</a>; </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>};</div>
+<div class="ttc" id="a_tile_8h_html_a271bc07be325bca511bcb747e0ff2fda"><div class="ttname"><a href="_tile_8h.html#a271bc07be325bca511bcb747e0ff2fda">eTileType</a></div><div class="ttdeci">eTileType</div><div class="ttdoc">Типы плиток.</div><div class="ttdef"><b>Definition</b> Tile.h:19</div></div>
+<div class="ttc" id="a_tile_8h_html_a271bc07be325bca511bcb747e0ff2fdaa558dc4e29655337a3994251549d0dc5d"><div class="ttname"><a href="_tile_8h.html#a271bc07be325bca511bcb747e0ff2fdaa558dc4e29655337a3994251549d0dc5d">eTileType::e_Path</a></div><div class="ttdeci">@ e_Path</div></div>
+<div class="ttc" id="a_tile_8h_html_a271bc07be325bca511bcb747e0ff2fdaa73e0433ad21b32161a6d783cedaf4d41"><div class="ttname"><a href="_tile_8h.html#a271bc07be325bca511bcb747e0ff2fdaa73e0433ad21b32161a6d783cedaf4d41">eTileType::e_PowerUp</a></div><div class="ttdeci">@ e_PowerUp</div></div>
+<div class="ttc" id="a_tile_8h_html_a271bc07be325bca511bcb747e0ff2fdaa85e8d42f3c0ebedf4286bb323168f1f9"><div class="ttname"><a href="_tile_8h.html#a271bc07be325bca511bcb747e0ff2fdaa85e8d42f3c0ebedf4286bb323168f1f9">eTileType::e_Wall</a></div><div class="ttdeci">@ e_Wall</div></div>
+<div class="ttc" id="a_tile_8h_html_a271bc07be325bca511bcb747e0ff2fdaac91ee991934e5b21d21ff0d62490a7c4"><div class="ttname"><a href="_tile_8h.html#a271bc07be325bca511bcb747e0ff2fdaac91ee991934e5b21d21ff0d62490a7c4">eTileType::e_Coin</a></div><div class="ttdeci">@ e_Coin</div></div>
+<div class="ttc" id="a_tile_8h_html_a271bc07be325bca511bcb747e0ff2fdaafdd9ca6f48a11f8d902891c939e71326"><div class="ttname"><a href="_tile_8h.html#a271bc07be325bca511bcb747e0ff2fdaafdd9ca6f48a11f8d902891c939e71326">eTileType::e_WrapAroundPath</a></div><div class="ttdeci">@ e_WrapAroundPath</div></div>
+<div class="ttc" id="astruct_tile_html"><div class="ttname"><a href="struct_tile.html">Tile</a></div><div class="ttdoc">Структура плитки.</div><div class="ttdef"><b>Definition</b> Tile.h:33</div></div>
+<div class="ttc" id="astruct_tile_html_a058410ac3e8f1bdf457120b4958fcd4b"><div class="ttname"><a href="struct_tile.html#a058410ac3e8f1bdf457120b4958fcd4b">Tile::m_hCost</a></div><div class="ttdeci">int m_hCost</div><div class="ttdef"><b>Definition</b> Tile.h:76</div></div>
+<div class="ttc" id="astruct_tile_html_a1a2526801c46e7432523b09b038fc137"><div class="ttname"><a href="struct_tile.html#a1a2526801c46e7432523b09b038fc137">Tile::m_fCost</a></div><div class="ttdeci">int m_fCost</div><div class="ttdef"><b>Definition</b> Tile.h:74</div></div>
+<div class="ttc" id="astruct_tile_html_a2d2e73b37524e9e54049eed3c9debc8a"><div class="ttname"><a href="struct_tile.html#a2d2e73b37524e9e54049eed3c9debc8a">Tile::Tile</a></div><div class="ttdeci">Tile(eTileType type, sf::Vector2i position, bool canCollide)</div><div class="ttdoc">Конструктор с параметрами.</div><div class="ttdef"><b>Definition</b> Tile.h:43</div></div>
+<div class="ttc" id="astruct_tile_html_a2d4e00e6f685950bdca82d10a6badbe3"><div class="ttname"><a href="struct_tile.html#a2d4e00e6f685950bdca82d10a6badbe3">Tile::operator==</a></div><div class="ttdeci">bool operator==(const Tile &amp;tile) const</div><div class="ttdoc">Оператор равенства.</div><div class="ttdef"><b>Definition</b> Tile.h:56</div></div>
+<div class="ttc" id="astruct_tile_html_a393831c0e1f7441890815b522dde87bb"><div class="ttname"><a href="struct_tile.html#a393831c0e1f7441890815b522dde87bb">Tile::CalculateFCost</a></div><div class="ttdeci">void CalculateFCost()</div><div class="ttdoc">Вычисление значения F-стоимости.</div><div class="ttdef"><b>Definition</b> Tile.h:65</div></div>
+<div class="ttc" id="astruct_tile_html_a572c8706568e37b0e12515e4105a6fa5"><div class="ttname"><a href="struct_tile.html#a572c8706568e37b0e12515e4105a6fa5">Tile::m_gCost</a></div><div class="ttdeci">int m_gCost</div><div class="ttdef"><b>Definition</b> Tile.h:75</div></div>
+<div class="ttc" id="astruct_tile_html_a8bc3dd3f6846bd57dd515f24e3531afc"><div class="ttname"><a href="struct_tile.html#a8bc3dd3f6846bd57dd515f24e3531afc">Tile::m_cameFromNode</a></div><div class="ttdeci">Tile * m_cameFromNode</div><div class="ttdef"><b>Definition</b> Tile.h:73</div></div>
+<div class="ttc" id="astruct_tile_html_adf65d98dc087bbb56bc7e98d16d562f3"><div class="ttname"><a href="struct_tile.html#adf65d98dc087bbb56bc7e98d16d562f3">Tile::m_type</a></div><div class="ttdeci">eTileType m_type</div><div class="ttdef"><b>Definition</b> Tile.h:69</div></div>
+<div class="ttc" id="astruct_tile_html_afb491fc45c73584446539fab187ca1e9"><div class="ttname"><a href="struct_tile.html#afb491fc45c73584446539fab187ca1e9">Tile::m_canCollide</a></div><div class="ttdeci">bool m_canCollide</div><div class="ttdef"><b>Definition</b> Tile.h:71</div></div>
+<div class="ttc" id="astruct_tile_html_afd7bd5bc9a5fa6e4f7e3056f5571fc68"><div class="ttname"><a href="struct_tile.html#afd7bd5bc9a5fa6e4f7e3056f5571fc68">Tile::m_position</a></div><div class="ttdeci">sf::Vector2i m_position</div><div class="ttdef"><b>Definition</b> Tile.h:70</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.7
+</small></address>
+</body>
+</html>

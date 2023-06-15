@@ -1,0 +1,257 @@
+\doxysection{Класс Pac\+Man}
+\hypertarget{class_pac_man}{}\label{class_pac_man}\index{PacMan@{PacMan}}
+
+
+Класс Пакмана.  
+
+
+
+
+{\ttfamily \#include $<$Pacman.\+h$>$}
+
+Граф наследования\+:Pac\+Man\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_pac_man}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_pac_man_ac504d7528a9e4d72b04ce279667af9ca}{Pac\+Man}} ()
+\begin{DoxyCompactList}\small\item\em Конструктор по умолчанию. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pac_man_aa99ecb3b7ff401800554697e959525f7}{Update}} (const std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{struct_tile}{Tile}} $>$ $>$ \&tiles)
+\begin{DoxyCompactList}\small\item\em Обновление состояния Пакмана. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pac_man_a68daa96824a837e18205796d4d7cc58c}{Render}} (sf\+::\+Render\+Window \&window)
+\begin{DoxyCompactList}\small\item\em Отрисовка Пакмана. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{_pacman_8h_a803a5752413a4532fc780eb312bf2fe5}{e\+Pac\+Man\+State}} \& \mbox{\hyperlink{class_pac_man_a7576f9fcfab872360aec7fd784e62431}{Get\+Pac\+Man\+State}} () const
+\begin{DoxyCompactList}\small\item\em Получение текущего состояния Пакмана. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pac_man_a9fdb94a94e432662e7e7524f72be01a7}{Power\+Up}} ()
+\begin{DoxyCompactList}\small\item\em Усиление Пакмана. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pac_man_a5a21a57d4a14e967fe7f6bbb09b8deaa}{Add\+Points}} (int amount)
+\begin{DoxyCompactList}\small\item\em Добавление очков. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_pac_man_ad463aa9f6a320a6e1ae2fe22338490b9}{Get\+Points}} () const
+\begin{DoxyCompactList}\small\item\em Получение текущего счета Пакмана. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_pac_man_ac641a1d58f7d6ea5c29cff15e529a7d6}{Get\+Lives\+Remaining}} () const
+\begin{DoxyCompactList}\small\item\em Получение количества оставшихся жизней Пакмана. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pac_man_a07cc2ea8c31cebb35353fe7c3e44d400}{Reset}} ()
+\begin{DoxyCompactList}\small\item\em Сброс состояния Пакмана. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_pac_man_ac213b85e581660cd02f2b409ead1b8ac}{Is\+Alive}} () const
+\begin{DoxyCompactList}\small\item\em Получение состояния жизни Пакмана. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pac_man_ae05f92e99edfa0c2587b110f34bf9117}{Set\+Is\+Alive}} (bool alive)
+\begin{DoxyCompactList}\small\item\em Установка состояния жизни Пакмана. \end{DoxyCompactList}\item 
+\Hypertarget{class_pac_man_ac1a61d27346d2aa065431d8b2792c460}\label{class_pac_man_ac1a61d27346d2aa065431d8b2792c460} 
+void {\bfseries Add\+Lives} (int n)
+\end{DoxyCompactItemize}
+\doxysubsection*{Открытые члены унаследованные от \mbox{\hyperlink{class_entity}{Entity}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_entity_ab7eb106fa5ab84ba79d40488cd0a3779}{Set\+Direction}} (const e\+Direction direction)
+\begin{DoxyCompactList}\small\item\em Устанавливает направление движения сущности. \end{DoxyCompactList}\item 
+e\+Direction \mbox{\hyperlink{class_entity_adb5b08aaa372e3a1f7aad93731cfc2af}{Get\+Direction}} () const
+\begin{DoxyCompactList}\small\item\em Возвращает текущее направление движения сущности. \end{DoxyCompactList}\item 
+sf\+::\+Vector2i \mbox{\hyperlink{class_entity_a29a89bbdae131a7c73e5d8e53b3a3889}{Get\+Position}} () const
+\begin{DoxyCompactList}\small\item\em Возвращает текущую позицию сущности. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_entity_a65fab80b9b3308ca83dda032ce6566c7}{Set\+Position}} (const sf\+::\+Vector2i position)
+\begin{DoxyCompactList}\small\item\em Устанавливает позицию сущности. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Дополнительные унаследованные члены}
+\doxysubsection*{Защищенные члены унаследованные от \mbox{\hyperlink{class_entity}{Entity}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_entity_a02097b55d7dcc8a0c323ce89fda0a5d3}{Entity}} (const sf\+::\+Vector2i position, const int speed, const e\+Direction starting\+Direction, sf\+::\+Color colour)
+\begin{DoxyCompactList}\small\item\em Конструктор класса \doxylink{class_entity}{Entity}. \end{DoxyCompactList}\item 
+void {\bfseries Wrap\+Around} ()
+\begin{DoxyCompactList}\small\item\em Обрабатывает перемещение сущности за границы игрового поля. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_entity_abac0cb66c435ab4e74cd5b1f785ba087}{Check\+For\+Blockades}} (const std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{struct_tile}{Tile}} $>$ $>$ \&tiles)
+\begin{DoxyCompactList}\small\item\em Проверяет наличие препятствий на пути движения сущности. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Защищенные данные унаследованные от \mbox{\hyperlink{class_entity}{Entity}}}
+\begin{DoxyCompactItemize}
+\item 
+sf\+::\+Vector2i {\bfseries m\+\_\+position}
+\begin{DoxyCompactList}\small\item\em Позиция сущности. \end{DoxyCompactList}\item 
+int {\bfseries m\+\_\+speed}
+\begin{DoxyCompactList}\small\item\em Скорость движения сущности. \end{DoxyCompactList}\item 
+e\+Direction {\bfseries m\+\_\+current\+Direction}
+\begin{DoxyCompactList}\small\item\em Текущее направление движения сущности. \end{DoxyCompactList}\item 
+std\+::vector$<$ e\+Direction $>$ {\bfseries m\+\_\+limited\+Directions}
+\begin{DoxyCompactList}\small\item\em Ограниченные направления движения сущности. \end{DoxyCompactList}\item 
+sf\+::\+Rectangle\+Shape {\bfseries m\+\_\+shape}
+\begin{DoxyCompactList}\small\item\em Форма сущности. \end{DoxyCompactList}\item 
+sf\+::\+Color {\bfseries m\+\_\+colour}
+\begin{DoxyCompactList}\small\item\em Цвет сущности. \end{DoxyCompactList}\item 
+sf\+::\+Clock {\bfseries m\+\_\+clock}
+\begin{DoxyCompactList}\small\item\em Таймер для обновления состояния сущности. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Класс Пакмана. 
+
+Класс \doxylink{class_pac_man}{Pac\+Man} наследуется от класса \doxylink{class_entity}{Entity} и представляет собой игрового персонажа Пакмана. 
+
+\doxysubsection{Конструктор(ы)}
+\Hypertarget{class_pac_man_ac504d7528a9e4d72b04ce279667af9ca}\label{class_pac_man_ac504d7528a9e4d72b04ce279667af9ca} 
+\index{PacMan@{PacMan}!PacMan@{PacMan}}
+\index{PacMan@{PacMan}!PacMan@{PacMan}}
+\doxysubsubsection{\texorpdfstring{PacMan()}{PacMan()}}
+{\footnotesize\ttfamily Pac\+Man\+::\+Pac\+Man (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Конструктор по умолчанию. 
+
+Инициализирует объект класса \doxylink{class_pac_man}{Pac\+Man} с начальными значениями. 
+
+\doxysubsection{Методы}
+\Hypertarget{class_pac_man_a5a21a57d4a14e967fe7f6bbb09b8deaa}\label{class_pac_man_a5a21a57d4a14e967fe7f6bbb09b8deaa} 
+\index{PacMan@{PacMan}!AddPoints@{AddPoints}}
+\index{AddPoints@{AddPoints}!PacMan@{PacMan}}
+\doxysubsubsection{\texorpdfstring{AddPoints()}{AddPoints()}}
+{\footnotesize\ttfamily void Pac\+Man\+::\+Add\+Points (\begin{DoxyParamCaption}\item[{int}]{amount }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Добавление очков. 
+
+Добавляет указанное количество очков к текущему счету Пакмана.
+
+
+\begin{DoxyParams}{Аргументы}
+{\em amount} & Количество очков для добавления. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_pac_man_ac641a1d58f7d6ea5c29cff15e529a7d6}\label{class_pac_man_ac641a1d58f7d6ea5c29cff15e529a7d6} 
+\index{PacMan@{PacMan}!GetLivesRemaining@{GetLivesRemaining}}
+\index{GetLivesRemaining@{GetLivesRemaining}!PacMan@{PacMan}}
+\doxysubsubsection{\texorpdfstring{GetLivesRemaining()}{GetLivesRemaining()}}
+{\footnotesize\ttfamily int Pac\+Man\+::\+Get\+Lives\+Remaining (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Получение количества оставшихся жизней Пакмана. 
+
+Возвращает количество оставшихся жизней Пакмана.
+
+\begin{DoxyReturn}{Возвращает}
+Количество оставшихся жизней Пакмана (int). 
+\end{DoxyReturn}
+\Hypertarget{class_pac_man_a7576f9fcfab872360aec7fd784e62431}\label{class_pac_man_a7576f9fcfab872360aec7fd784e62431} 
+\index{PacMan@{PacMan}!GetPacManState@{GetPacManState}}
+\index{GetPacManState@{GetPacManState}!PacMan@{PacMan}}
+\doxysubsubsection{\texorpdfstring{GetPacManState()}{GetPacManState()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{_pacman_8h_a803a5752413a4532fc780eb312bf2fe5}{e\+Pac\+Man\+State}} \& Pac\+Man\+::\+Get\+Pac\+Man\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Получение текущего состояния Пакмана. 
+
+Возвращает текущее состояние Пакмана.
+
+\begin{DoxyReturn}{Возвращает}
+Текущее состояние Пакмана (e\+Pac\+Man\+State). 
+\end{DoxyReturn}
+\Hypertarget{class_pac_man_ad463aa9f6a320a6e1ae2fe22338490b9}\label{class_pac_man_ad463aa9f6a320a6e1ae2fe22338490b9} 
+\index{PacMan@{PacMan}!GetPoints@{GetPoints}}
+\index{GetPoints@{GetPoints}!PacMan@{PacMan}}
+\doxysubsubsection{\texorpdfstring{GetPoints()}{GetPoints()}}
+{\footnotesize\ttfamily int Pac\+Man\+::\+Get\+Points (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Получение текущего счета Пакмана. 
+
+Возвращает текущий счет Пакмана.
+
+\begin{DoxyReturn}{Возвращает}
+Текущий счет Пакмана (int). 
+\end{DoxyReturn}
+\Hypertarget{class_pac_man_ac213b85e581660cd02f2b409ead1b8ac}\label{class_pac_man_ac213b85e581660cd02f2b409ead1b8ac} 
+\index{PacMan@{PacMan}!IsAlive@{IsAlive}}
+\index{IsAlive@{IsAlive}!PacMan@{PacMan}}
+\doxysubsubsection{\texorpdfstring{IsAlive()}{IsAlive()}}
+{\footnotesize\ttfamily bool Pac\+Man\+::\+Is\+Alive (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Получение состояния жизни Пакмана. 
+
+Возвращает состояние жизни Пакмана (жив или мертв).
+
+\begin{DoxyReturn}{Возвращает}
+Состояние жизни Пакмана (bool). 
+\end{DoxyReturn}
+\Hypertarget{class_pac_man_a9fdb94a94e432662e7e7524f72be01a7}\label{class_pac_man_a9fdb94a94e432662e7e7524f72be01a7} 
+\index{PacMan@{PacMan}!PowerUp@{PowerUp}}
+\index{PowerUp@{PowerUp}!PacMan@{PacMan}}
+\doxysubsubsection{\texorpdfstring{PowerUp()}{PowerUp()}}
+{\footnotesize\ttfamily void Pac\+Man\+::\+Power\+Up (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Усиление Пакмана. 
+
+Устанавливает состояние Пакмана в режим усиления и обнуляет таймер усиления. \Hypertarget{class_pac_man_a68daa96824a837e18205796d4d7cc58c}\label{class_pac_man_a68daa96824a837e18205796d4d7cc58c} 
+\index{PacMan@{PacMan}!Render@{Render}}
+\index{Render@{Render}!PacMan@{PacMan}}
+\doxysubsubsection{\texorpdfstring{Render()}{Render()}}
+{\footnotesize\ttfamily void Pac\+Man\+::\+Render (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \&}]{window }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Отрисовка Пакмана. 
+
+Отрисовывает Пакмана на экране в зависимости от его текущего состояния и позиции.
+
+
+\begin{DoxyParams}{Аргументы}
+{\em window} & Объект класса sf\+::\+Render\+Window, представляющий собой окно для отрисовки. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_pac_man_a07cc2ea8c31cebb35353fe7c3e44d400}\label{class_pac_man_a07cc2ea8c31cebb35353fe7c3e44d400} 
+\index{PacMan@{PacMan}!Reset@{Reset}}
+\index{Reset@{Reset}!PacMan@{PacMan}}
+\doxysubsubsection{\texorpdfstring{Reset()}{Reset()}}
+{\footnotesize\ttfamily void Pac\+Man\+::\+Reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Сброс состояния Пакмана. 
+
+Сбрасывает состояние Пакмана до начальных значений. \Hypertarget{class_pac_man_ae05f92e99edfa0c2587b110f34bf9117}\label{class_pac_man_ae05f92e99edfa0c2587b110f34bf9117} 
+\index{PacMan@{PacMan}!SetIsAlive@{SetIsAlive}}
+\index{SetIsAlive@{SetIsAlive}!PacMan@{PacMan}}
+\doxysubsubsection{\texorpdfstring{SetIsAlive()}{SetIsAlive()}}
+{\footnotesize\ttfamily void Pac\+Man\+::\+Set\+Is\+Alive (\begin{DoxyParamCaption}\item[{bool}]{alive }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Установка состояния жизни Пакмана. 
+
+Устанавливает состояние жизни Пакмана в указанное значение. Если значение равно false, то уменьшает количество жизней на 1 и отнимает 500 очков от текущего счета (если счет меньше 500, то устанавливает его в 0).
+
+
+\begin{DoxyParams}{Аргументы}
+{\em alive} & Новое состояние жизни Пакмана (bool). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_pac_man_aa99ecb3b7ff401800554697e959525f7}\label{class_pac_man_aa99ecb3b7ff401800554697e959525f7} 
+\index{PacMan@{PacMan}!Update@{Update}}
+\index{Update@{Update}!PacMan@{PacMan}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Pac\+Man\+::\+Update (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{struct_tile}{Tile}} $>$ $>$ \&}]{tiles }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Обновление состояния Пакмана. 
+
+Обновляет состояние Пакмана в зависимости от текущего состояния и окружения.
+
+
+\begin{DoxyParams}{Аргументы}
+{\em tiles} & Вектор векторов объектов класса \doxylink{struct_tile}{Tile}, представляющий собой игровое поле. \\
+\hline
+\end{DoxyParams}
+
+
+Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_pacman_8h}{Pacman.\+h}}\end{DoxyCompactItemize}

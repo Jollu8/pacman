@@ -1,0 +1,148 @@
+\doxysection{Класс Ghost}
+\hypertarget{class_ghost}{}\label{class_ghost}\index{Ghost@{Ghost}}
+
+
+Класс \doxylink{class_ghost}{Ghost} представляет собой призрака в игре Pac-\/\+Man.  
+
+
+
+
+{\ttfamily \#include $<$Ghost.\+h$>$}
+
+Граф наследования\+:Ghost\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_ghost}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_ghost_a6bf24a3cf66a0ea2e083a8aed345ec96}{Ghost}} (e\+Ghost\+Type type, std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{struct_tile}{Tile}} $>$ $>$ \&grid, \mbox{\hyperlink{class_pac_man}{Pac\+Man}} \&pac\+Man)
+\begin{DoxyCompactList}\small\item\em Конструктор класса \doxylink{class_ghost}{Ghost}. \end{DoxyCompactList}\item 
+\Hypertarget{class_ghost_a1264428b63541a7f3b6548e693491e3e}\label{class_ghost_a1264428b63541a7f3b6548e693491e3e} 
+void {\bfseries Update} ()
+\begin{DoxyCompactList}\small\item\em Обновляет состояние призрака. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_ghost_a49f0ac9b372e5c7bb947457d12a61415}{Render}} (sf\+::\+Render\+Window \&window)
+\begin{DoxyCompactList}\small\item\em Отрисовывает призрака на экране. \end{DoxyCompactList}\item 
+\Hypertarget{class_ghost_a51900002936b06acc029c845d9cb9240}\label{class_ghost_a51900002936b06acc029c845d9cb9240} 
+void {\bfseries Reset} ()
+\begin{DoxyCompactList}\small\item\em Сбрасывает состояние призрака. \end{DoxyCompactList}\item 
+const e\+Ghost\+State \& \mbox{\hyperlink{class_ghost_a273964aa77a35f416ec7d18189c26d15}{Get\+Ghost\+State}} () const
+\begin{DoxyCompactList}\small\item\em Возвращает текущее состояние призрака. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_ghost_a51ccddd3e944e0802ce0ccaebe1354c1}{Set\+Ghost\+State}} (e\+Ghost\+State state)
+\begin{DoxyCompactList}\small\item\em Устанавливает состояние призрака. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Открытые члены унаследованные от \mbox{\hyperlink{class_entity}{Entity}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_entity_ab7eb106fa5ab84ba79d40488cd0a3779}{Set\+Direction}} (const e\+Direction direction)
+\begin{DoxyCompactList}\small\item\em Устанавливает направление движения сущности. \end{DoxyCompactList}\item 
+e\+Direction \mbox{\hyperlink{class_entity_adb5b08aaa372e3a1f7aad93731cfc2af}{Get\+Direction}} () const
+\begin{DoxyCompactList}\small\item\em Возвращает текущее направление движения сущности. \end{DoxyCompactList}\item 
+sf\+::\+Vector2i \mbox{\hyperlink{class_entity_a29a89bbdae131a7c73e5d8e53b3a3889}{Get\+Position}} () const
+\begin{DoxyCompactList}\small\item\em Возвращает текущую позицию сущности. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_entity_a65fab80b9b3308ca83dda032ce6566c7}{Set\+Position}} (const sf\+::\+Vector2i position)
+\begin{DoxyCompactList}\small\item\em Устанавливает позицию сущности. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Дополнительные унаследованные члены}
+\doxysubsection*{Защищенные члены унаследованные от \mbox{\hyperlink{class_entity}{Entity}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_entity_a02097b55d7dcc8a0c323ce89fda0a5d3}{Entity}} (const sf\+::\+Vector2i position, const int speed, const e\+Direction starting\+Direction, sf\+::\+Color colour)
+\begin{DoxyCompactList}\small\item\em Конструктор класса \doxylink{class_entity}{Entity}. \end{DoxyCompactList}\item 
+void {\bfseries Wrap\+Around} ()
+\begin{DoxyCompactList}\small\item\em Обрабатывает перемещение сущности за границы игрового поля. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_entity_abac0cb66c435ab4e74cd5b1f785ba087}{Check\+For\+Blockades}} (const std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{struct_tile}{Tile}} $>$ $>$ \&tiles)
+\begin{DoxyCompactList}\small\item\em Проверяет наличие препятствий на пути движения сущности. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Защищенные данные унаследованные от \mbox{\hyperlink{class_entity}{Entity}}}
+\begin{DoxyCompactItemize}
+\item 
+sf\+::\+Vector2i {\bfseries m\+\_\+position}
+\begin{DoxyCompactList}\small\item\em Позиция сущности. \end{DoxyCompactList}\item 
+int {\bfseries m\+\_\+speed}
+\begin{DoxyCompactList}\small\item\em Скорость движения сущности. \end{DoxyCompactList}\item 
+e\+Direction {\bfseries m\+\_\+current\+Direction}
+\begin{DoxyCompactList}\small\item\em Текущее направление движения сущности. \end{DoxyCompactList}\item 
+std\+::vector$<$ e\+Direction $>$ {\bfseries m\+\_\+limited\+Directions}
+\begin{DoxyCompactList}\small\item\em Ограниченные направления движения сущности. \end{DoxyCompactList}\item 
+sf\+::\+Rectangle\+Shape {\bfseries m\+\_\+shape}
+\begin{DoxyCompactList}\small\item\em Форма сущности. \end{DoxyCompactList}\item 
+sf\+::\+Color {\bfseries m\+\_\+colour}
+\begin{DoxyCompactList}\small\item\em Цвет сущности. \end{DoxyCompactList}\item 
+sf\+::\+Clock {\bfseries m\+\_\+clock}
+\begin{DoxyCompactList}\small\item\em Таймер для обновления состояния сущности. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Класс \doxylink{class_ghost}{Ghost} представляет собой призрака в игре Pac-\/\+Man. 
+
+\doxysubsection{Конструктор(ы)}
+\Hypertarget{class_ghost_a6bf24a3cf66a0ea2e083a8aed345ec96}\label{class_ghost_a6bf24a3cf66a0ea2e083a8aed345ec96} 
+\index{Ghost@{Ghost}!Ghost@{Ghost}}
+\index{Ghost@{Ghost}!Ghost@{Ghost}}
+\doxysubsubsection{\texorpdfstring{Ghost()}{Ghost()}}
+{\footnotesize\ttfamily Ghost\+::\+Ghost (\begin{DoxyParamCaption}\item[{e\+Ghost\+Type}]{type,  }\item[{std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{struct_tile}{Tile}} $>$ $>$ \&}]{grid,  }\item[{\mbox{\hyperlink{class_pac_man}{Pac\+Man}} \&}]{pac\+Man }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+Конструктор класса \doxylink{class_ghost}{Ghost}. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em type} & Тип призрака. \\
+\hline
+{\em grid} & Двумерный массив тайлов игрового поля. \\
+\hline
+{\em pac\+Man} & Ссылка на объект класса \doxylink{class_pac_man}{Pac\+Man}. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Методы}
+\Hypertarget{class_ghost_a273964aa77a35f416ec7d18189c26d15}\label{class_ghost_a273964aa77a35f416ec7d18189c26d15} 
+\index{Ghost@{Ghost}!GetGhostState@{GetGhostState}}
+\index{GetGhostState@{GetGhostState}!Ghost@{Ghost}}
+\doxysubsubsection{\texorpdfstring{GetGhostState()}{GetGhostState()}}
+{\footnotesize\ttfamily const e\+Ghost\+State \& Ghost\+::\+Get\+Ghost\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Возвращает текущее состояние призрака. 
+
+\begin{DoxyReturn}{Возвращает}
+Текущее состояние призрака. 
+\end{DoxyReturn}
+\Hypertarget{class_ghost_a49f0ac9b372e5c7bb947457d12a61415}\label{class_ghost_a49f0ac9b372e5c7bb947457d12a61415} 
+\index{Ghost@{Ghost}!Render@{Render}}
+\index{Render@{Render}!Ghost@{Ghost}}
+\doxysubsubsection{\texorpdfstring{Render()}{Render()}}
+{\footnotesize\ttfamily void Ghost\+::\+Render (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \&}]{window }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Отрисовывает призрака на экране. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em window} & Окно для отрисовки. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_ghost_a51ccddd3e944e0802ce0ccaebe1354c1}\label{class_ghost_a51ccddd3e944e0802ce0ccaebe1354c1} 
+\index{Ghost@{Ghost}!SetGhostState@{SetGhostState}}
+\index{SetGhostState@{SetGhostState}!Ghost@{Ghost}}
+\doxysubsubsection{\texorpdfstring{SetGhostState()}{SetGhostState()}}
+{\footnotesize\ttfamily void Ghost\+::\+Set\+Ghost\+State (\begin{DoxyParamCaption}\item[{e\+Ghost\+State}]{state }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Устанавливает состояние призрака. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em state} & Новое состояние призрака. \\
+\hline
+\end{DoxyParams}
+
+
+Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+Ghost.\+h\end{DoxyCompactItemize}
